@@ -3,20 +3,20 @@ on: push
 jobs:
    test:
     runs-on: ubuntu-latest
-    strategy:
-      matrix:
-        node_version: [16]
-
     steps:
       - uses: actions/checkout@v3
+
+      - name: Install Node.js
+        uses: actions/setup-node@v3
+        with:
+          node-version: 16
+
       - name: Install pnpm
         uses: pnpm/action-setup@v2
-
-      - name: Set node version to ${{ matrix.node_version }}
-        uses: actions/setup-node@v3
-
         with:
-          node-version: ${{ matrix.node_version }}
+          version: 7
+          run_install: false
+
       - name: Install
         run: pnpm i
       - name: Test
