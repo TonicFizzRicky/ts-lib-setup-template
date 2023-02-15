@@ -10,18 +10,27 @@
     "prettier": "prettier --write -l \"./**/*\"",
     "staged": "pnpm exec lint-staged -c lintstagedrc.js",
     "commit": "pnpm exec cz",
-    "release": "pnpm changeset version"
+    "changelog": "pnpm exec conventional-changelog -p angular -i CHANGELOG.md -s -r 0"
+  },
+  "config": {
+    "commitizen": {
+      "path": "./node_modules/cz-conventional-changelog"
+    }
+  },
+  "commitlint": {
+    "extends": [
+      "@commitlint/config-conventional"
+    ]
   },
   "devDependencies": {
-    "@changesets/cli": "^2.26.0",
     "@commitlint/cli": "^17.4.3",
     "@commitlint/config-conventional": "^17.4.3",
     "@typescript-eslint/eslint-plugin": "^5.52.0",
     "@typescript-eslint/parser": "^5.52.0",
     "@vitest/coverage-c8": "^0.28.5",
     "commitizen": "^4.3.0",
+    "conventional-changelog-cli": "^2.2.2",
     "cz-conventional-changelog": "^3.3.0",
-    "cz-customizable": "^7.0.0",
     "eslint": "^8.34.0",
     "eslint-config-alloy": "^4.9.0",
     "husky": "^8.0.3",
