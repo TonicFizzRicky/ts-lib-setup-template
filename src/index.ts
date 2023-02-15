@@ -1,3 +1,1 @@
-const a = () => {
-  return 20;
-};
+export * from './add';
