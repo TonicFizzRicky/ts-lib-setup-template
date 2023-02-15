@@ -1,13 +1,14 @@
-{	
-	"private":true,
-	"scripts":{
-		"commit":"pnpm exec cz"
+{
+	"private": true,
+	"scripts": {
+		"commit": "pnpm exec cz"
 	},
 	"devDependencies": {
 		"@commitlint/cli": "^17.4.3",
 		"@commitlint/config-conventional": "^17.4.3",
 		"commitizen": "^4.3.0",
 		"cz-conventional-changelog": "^3.3.0",
+		"cz-customizable": "^7.0.0",
 		"husky": "^8.0.3"
 	}
 }
