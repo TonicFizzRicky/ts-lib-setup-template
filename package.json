@@ -12,6 +12,16 @@
     "commit": "pnpm exec cz",
     "release": "pnpm changeset version"
   },
+  "config": {
+    "commitizen": {
+      "path": "./node_modules/cz-conventional-changelog"
+    }
+  },
+  "commitlint": { 
+    "extends": [ 
+      "@commitlint/config-conventional" 
+    ] 
+  } ,
   "devDependencies": {
     "@changesets/cli": "^2.26.0",
     "@commitlint/cli": "^17.4.3",
